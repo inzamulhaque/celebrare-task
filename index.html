@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrare</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <div class="lg-none">
+                <i id="openMenu" class="fa-solid fa-bars" onclick="openMenu()"></i>
+                <i id="openClose" class="fa-solid fa-xmark d-none" onclick="closeMenu()"></i>
+            </div>
+            <img src="./assets/Logo.png" alt="Logo" class="logo sm-mx-auto">
+        </div>
+
+        <div class="sm-nav sm-none" id="menu">
+            <div class="navbar">
+                <ul class="navbar-menu">
+                    <li class="navbar-item">Wedding Cards</li>
+                    <li class="navbar-item">Birthday Cards</li>
+                    <li class="navbar-item">Feeling Cards</li>
+                    <li class="navbar-item">Anniversary Cards</li>
+                </ul>
+            </div>
+
+            <div class="login-btn">
+                <ul class="login-menu">
+                    <li class="login-item">Login</li>
+                    <li class="login-item sm-none">|</li>
+                    <li class="login-item">Signup</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="digital-card">
+            <h1>Digital Card Details</h1>
+        </div>
+
+        <div class="hero-section">
+            <div class="testimonials">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/Page1.jpg" alt="Card Image" class="swiper-slide-image" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Page2.jpg" alt="Card Image" class="swiper-slide-image" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Page3.jpg" alt="Card Image" class="swiper-slide-image" />
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="details sm-none">
+                <h1>Card Title</h1>
+                <div class="price-offer">
+                    <p class="price">$499 <small class="previusPrice">$2000</small></p>
+                    <p class="offer">75%Off</p>
+                </div>
+                <p class="detail">
+                    Donec eu ornare mi. Sed finibus
+                    condimentum mauris, ut dictum eros
+                    maximus vitae. Nullam
+                    condimentum tortor ac elit feugiat
+                    iaculis. Aenean mauris nisl, blandit
+                </p>
+                <button class="try-btn">Try this Card</button>
+            </div>
+            <div class="lg-none details">
+                <button class="try-btn">Try this Card</button>
+                <div class="price-offer">
+                    <p class="price">$499 <small class="previusPrice">$2000</small></p>
+                    <p class="offer">75%Off</p>
+                </div>
+                <hr class="w75" />
+                <h1>Card Title</h1>
+                <p class="detail">
+                    Donec eu ornare mi. Sed finibus
+                    condimentum mauris, ut dictum eros
+                    maximus vitae. Nullam
+                    condimentum tortor ac elit feugiat
+                    iaculis. Aenean mauris nisl, blandit
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="features-container">
+            <h1>Features</h1>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <p class="feature-info">
+                        Create your card <br> in just 5 mins
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <p class="feature-info">
+                        Customize the Text <br> with "Edit this Page" Option
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <p class="feature-info">
+                        Editing is available <br> after purchase also
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 15,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    width: 640,
+                    slidesPerView: 1,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            }
+        });
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
